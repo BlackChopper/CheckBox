@@ -1,8 +1,11 @@
-package com.blackchopper.checkbox;
+package com.blackchopper.example;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.blackchopper.checkbox.CheckBox;
+import com.blackchopper.example.R;
 
 public class MainActivity extends AppCompatActivity implements CheckBox.OnCheckedChangeListener {
 

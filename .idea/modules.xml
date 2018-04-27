@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CheckBox.iml" filepath="$PROJECT_DIR$/CheckBox.iml" />
+      <module fileurl="file://C:\Users\aliletter\Desktop\CheckBox\CheckBox.iml" filepath="C:\Users\aliletter\Desktop\CheckBox\CheckBox.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\aliletter\Desktop\CheckBox\app\app.iml" filepath="C:\Users\aliletter\Desktop\CheckBox\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libcheckbox/libcheckbox.iml" filepath="$PROJECT_DIR$/libcheckbox/libcheckbox.iml" />
+      <module fileurl="file://C:\Users\aliletter\Desktop\CheckBox\libcheckbox\libcheckbox.iml" filepath="C:\Users\aliletter\Desktop\CheckBox\libcheckbox\libcheckbox.iml" />
     </modules>
   </component>
 </project>

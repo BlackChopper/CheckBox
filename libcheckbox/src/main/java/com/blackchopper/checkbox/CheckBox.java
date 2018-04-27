@@ -100,6 +100,7 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
         AlphaAnimation alpa = new AlphaAnimation(1f, 0f);
         alpa.setDuration(duration / 2);
         alpa.setFillAfter(true);
+        alpa.setFillBefore(false);
         alpa.setInterpolator(new LinearInterpolator());
         alpa.setAnimationListener(this);
         startAnimation(alpa);
@@ -111,11 +112,11 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
 
     @Override
     public void onAnimationStart(Animation animation) {
-        setCheck(checkedStatus);
     }
 
     @Override
     public void onAnimationEnd(Animation animation) {
+        setCheck(checkedStatus);
         clearAnimation();
         AlphaAnimation alpa = new AlphaAnimation(0f, 1f);
         alpa.setDuration(duration / 2);
