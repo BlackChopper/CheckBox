@@ -72,17 +72,17 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
             e.printStackTrace();
         }
         ta.recycle();
-        setCheck(checkedStatus);
+        setChecked(checkedStatus);
         setOnClickListener(this);
     }
 
     public void setChecked(boolean isChecked) {
-        if (b) {
+        if (isChecked) {
             setBackgroundResource(checked);
         } else {
             setBackgroundResource(uncheck);
         }
-        checkedStatus=b;
+        checkedStatus=isChecked;
     }
 
     @Override
@@ -117,7 +117,7 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        setCheck(checkedStatus);
+        setChecked(checkedStatus);
         clearAnimation();
         AlphaAnimation alpa = new AlphaAnimation(0f, 1f);
         alpa.setDuration(duration / 2);
