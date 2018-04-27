@@ -76,12 +76,13 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
         setOnClickListener(this);
     }
 
-    public void setCheck(boolean b) {
+    public void setChecked(boolean isChecked) {
         if (b) {
             setBackgroundResource(checked);
         } else {
             setBackgroundResource(uncheck);
         }
+        checkedStatus=b;
     }
 
     @Override
