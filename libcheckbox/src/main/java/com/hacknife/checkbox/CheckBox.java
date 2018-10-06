@@ -1,4 +1,4 @@
-package com.blackchopper.checkbox;
+package com.hacknife.checkbox;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,10 +12,9 @@ import android.widget.ImageView;
 
 
 /**
- * author  : Black Chopper
+ * author  : hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
- * date    ：2018/4/26 19:24
+ * github  : http://github.com/hacknife
  * project : CheckBox
  */
 public class CheckBox extends ImageView implements View.OnClickListener, Animation.AnimationListener {

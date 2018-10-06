@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.blackchopper.checkbox.com.blackchopper.example.MainActivity">
+    android:layout_height="match_parent">
 
-    <com.blackchopper.checkbox.CheckBox
+    <com.hacknife.checkbox.CheckBox
         android:id="@+id/chb"
         android:layout_width="40dp"
         android:layout_height="40dp"
