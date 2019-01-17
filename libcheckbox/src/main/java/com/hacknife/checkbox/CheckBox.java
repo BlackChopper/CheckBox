@@ -84,9 +84,9 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
         }
         if (checkedStatus != isChecked) {
             if (checkedChangeListener != null)
-                checkedChangeListener.onCheckedChanged(null, checkedStatus);
+                checkedChangeListener.onCheckedChanged(null, isChecked);
             if (listener != null)
-                listener.onCheckedChanged(this, checkedStatus);
+                listener.onCheckedChanged(this, isChecked);
         }
         checkedStatus = isChecked;
 
