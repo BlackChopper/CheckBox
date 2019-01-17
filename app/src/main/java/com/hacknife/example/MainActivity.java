@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements CheckBox.OnChecke
     }
 
     @Override
-    public boolean onChange(View view, boolean isChecked) {
+    public boolean onCheckedChanged(View view, boolean isChecked) {
         return true;
     }
 }
