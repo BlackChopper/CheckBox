@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 
 
@@ -81,18 +82,27 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
         } else {
             setBackgroundResource(uncheck);
         }
-        checkedStatus=isChecked;
+        if (checkedStatus != isChecked) {
+            if (checkedChangeListener != null)
+                checkedChangeListener.onCheckedChanged(null, checkedStatus);
+            if (listener != null)
+                listener.onCheckedChanged(this, checkedStatus);
+        }
+        checkedStatus = isChecked;
+
     }
 
     @Override
     public void onClick(View v) {
         boolean last = checkedStatus;
-        checkedStatus = checkedStatus != true;
+        checkedStatus = !checkedStatus;
         if (listener != null)
-            if (!listener.onChange(this, checkedStatus))
-                checkedStatus = checkedStatus != true;
+            if (!listener.onCheckedChanged(this, checkedStatus))
+                checkedStatus = !checkedStatus;
         if (last == checkedStatus)
             return;
+        if (checkedChangeListener != null)
+            checkedChangeListener.onCheckedChanged(null, checkedStatus);
         startChangeAnimation();
     }
 
@@ -106,7 +116,7 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
         startAnimation(alpa);
     }
 
-    public boolean checked() {
+    public boolean isChecked() {
         return checkedStatus;
     }
 
@@ -143,6 +153,12 @@ public class CheckBox extends ImageView implements View.OnClickListener, Animati
     }
 
     public interface OnCheckedChangeListener {
-        boolean onChange(View view, boolean isChecked);
+        boolean onCheckedChanged(View view, boolean isChecked);
+    }
+
+    CompoundButton.OnCheckedChangeListener checkedChangeListener;
+
+    public void setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener checkedChangeListener) {
+        this.checkedChangeListener = checkedChangeListener;
     }
 }
